@@ -1,7 +1,9 @@
 ### Controle Financeiro
 
 ## Resumo
-    Este é um projeto disponibilizado pela trilha de imersao em desenvolvimento WEB da NewTab Academy, baseado no teste técnico de front-end para a empresa Via Varejo, que consiste em desenvolver uma página que possua as funcionalidades de criar, deletar e ler
+    Este é um projeto disponibilizado pela trilha de imersao em desenvolvimento WEB da NewTab
+    Academy, baseado no teste técnico de front-end para a empresa Via Varejo, que consiste em
+    desenvolver uma página que possua as funcionalidades de criar, deletar e ler
     transaçoes.
 
 ## Técnologias Utilizadas
