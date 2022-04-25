@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/transactions.css">
+    <link rel="stylesheet" href="./assets/css/form-transactions.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/medias.css">
+    <link rel="stylesheet" href='./assets/css/modal-menu.css'>
+
+    <script type="module" src="./src/views/app.js" defer></script>
+    
+    
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Controle financeiro</title>
+    </head>
+    <body>
+    
+    <header>
+        <div class="content">
+            <a href="index.html"><img class="logo" src="./assets/imgs/logo.svg" alt="Logo"></a>
+            <h1 class="title">Controle financeiro</h1>
+    
+            <!-- Menu hamburguer habilitado apenas para resoluçoes com dispositvos menores
+                que 768px de largura -->
+            <div id="open-menu" class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            
+            <nav id="nav-menu">
+
+                <!-- close-menu só é renderizado quando o menu lateral está aberto,
+                também para resoluçoes menores que 768px de largura -->
+                <img id="close-menu" src="./assets/imgs/close.svg">    
+                <button>Cadastro de transações</button>
+                <p class="line"></p> 
+                <button id="clear-all">Limpar dados</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container content">
+        <section class="new-transaction">
+            <form id="form-new-transaction">
+                <h2>Nova transaçao</h2>
+                
+                <div class="container-inputs">
+                    <div class="form-line">
+                    
+                        <label for="type-transaction">Tipo de transacao</label>
+                        
+                        <select name="type" id="type-transaction">
+                            <option value="Compra">Compra</option>
+                            <option value="Venda" selected>Venda</option>
+                        </select>                    
+                
+                    </div>
+                    
+                    <div class="form-line">
+                        <label for="description">Nome da mercadoria</label>
+                        <input type="text" name="description" id="description" placeholder="Insira o nome aqui" maxlength="20">
+                    </div>
+                    
+                    <div class="form-line">
+                        <label for="value">Valor</label>
+                        <input class="amount-input"
+                               name="amount" id="value"
+                               type="tel"
+                               maxlength="10" 
+                               placeholder="R$ 0,00"
+                               > 
+                               <!-- O type tel foi usado para haver compatibilidade com dispositivos móveis -->
+                    </div>   
+                </div>
+                
+                <div class="text-validation">
+                    <!-- Textos de validaçao do formulário e loading -->
+                    
+                </div>
+                <div class="form-line button">
+                    <input id="submit-btn" type="submit" value="Adicionar Transaçao"></input>
+                </div>
+                
+            </form>
+        </section>
+
+        <section class="transactions">
+            
+           
+
+            <!-- A div nothing-here é renderizada apenas quando nao existem transacoes salvas -->
+            <!-- Tabela renderizada pelo arquivo main.js -->
+                
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+    <!-- Modal utilizado para confirmaçao da exclusao de todas as transacoes -->
+    <div id="menu" class="modal-overlay">
+        <div class="modal-you-sure-container">
+            <div class="modal-itens-you-sure">
+                <img src="./assets/imgs/warning.svg" alt="">
+                <p>Voce realmente deseja apagar todas as transaçoes?</p>
+                <span>Esse processo nao poderá ser revertido!</span>    
+                <button class="confirm">Sim, eu quero apagar tudo</button>
+                <button class="cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

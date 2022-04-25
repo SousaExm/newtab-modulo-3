@@ -1,0 +1,175 @@
+/* -------------------- DEFINIÇOES GERAIS ----------------------------- */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .container.content{
+      align-items: flex-start;
+      padding-bottom: 20px;
+  }
+
+/* ---------------- INICIO DA ESTILIZACAO DO HEADER --------------------- */
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #e0e0e0;
+
+  margin-bottom: 30px;
+}
+
+
+
+.logo {
+  width: 40px;
+  height: 36.84px;
+  margin: 20px 20px 20px 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 100%;
+}
+
+nav {
+  width: 50%;
+  height: 40px;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav button {
+  text-decoration: none;
+  border: none;
+  background-color: #ffffff;
+  font-weight: bold;
+
+  height: 100%;
+  width: 50%;
+
+  padding: 0 10px;
+
+  cursor: pointer;
+}
+
+/* Close menu é ativado dinamicamente quando o menu lateral esta aberto */
+#close-menu {
+  display: none;
+  align-self: flex-start;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* Linha de separaçao entre as opcoes do menu quando a tela é maior que 768px */
+.line {
+  margin: 0px;
+  height: 20px;
+  border: 1px solid #979797;
+}
+
+/* ---------------- FIM DA ESTILIZACAO DO HEADER --------------------------- */
+
+/* ---------------- INICIO ESTILIZACAO MENU HAMBURGUER --------------------- */
+
+/* Menu visivel dinamicamente, apenas em resoluçoes menores que 768px */
+
+.hamburger-lines {
+    display: block;
+    height: 18px;
+    width: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    cursor: pointer;
+  }
+  
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+
+/* ---------------- FIM DA ESTILIZACAO MENU HAMBURGUER --------------------- */
+  
+footer {
+  
+    background-color: #333333;
+  
+    position: fixed;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+  
+  }
+
+/* ------------- INICIO DA ESTILIZACAO DA DIV DE TRANSACOES VAZIAS ------------ */
+/* Aparece dinamicamente caso nao hajam transacoes salvas */
+
+.nothing-here.none {
+  display: none;
+}
+
+.table-transactions.none {
+  display: none;
+}
+
+.nothing-here {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.nothing-here img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.nothing-here p,
+h2 {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* ------------- FIM DA ESTILIZACAO DA DIV DE TRANSACOES VAZIAS ------------ */

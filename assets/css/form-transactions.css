@@ -1,0 +1,75 @@
+/* ------------------- INICIO DA ESTILIZACAO DA SECTION NEW-TRANSACTIONS ------------------ */
+
+.new-transaction {
+    width: 400px;
+    height: auto;
+    border: 1px solid #979797;
+    border-radius: 4px;
+  }
+  
+  .new-transaction form {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    align-items: center;
+  }
+  
+  .container-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container-inputs .form-line {
+    margin-top: 8px;
+  }
+  
+  .form-line {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-line input,
+  .form-line select {
+    height: 32px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .form-line label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .text-validation {
+    margin-bottom: 8px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .form-line.button input {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  
+  .form-line.button input{
+      padding: 0;
+  }
+
+/* ------------------- FIM DA ESTILIZACAO DA SECTION NEW-TRANSACTIONS ------------------ */

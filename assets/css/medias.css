@@ -1,0 +1,189 @@
+@media screen and (max-width: 1112px) {
+    header , .container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container.content{
+        justify-content: flex-start
+    }
+    
+    #nav-menu{
+        width: 33%;
+        height:100%;
+
+        position:fixed;
+        right: 0;
+        top:0;
+
+        background-color:#333333;
+
+        display: none;
+        flex-direction: column;
+        justify-content:flex-start;
+    }
+
+    #nav-menu .line{
+        display:none;
+    }
+
+    #close {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        margin: 20px;
+        display: block;
+
+        align-self: flex-start;
+    }
+
+    #nav-menu button {
+        background-color:#333333;
+        color: #FFFFFF; 
+        border: none;
+        
+        margin: 0;
+        height:32px;
+        width: 100%;
+        padding: 8px 20px;
+    
+        text-align: right;
+    
+        cursor: pointer;
+    
+        font-weight: bold;
+    
+    }
+
+    #nav-menu button:hover {
+        background-color: #C4C4C4;
+        color: #333333;
+    }
+    
+    .hamburger-lines {
+        display: flex;
+    }
+    
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .new-transaction{
+        width:100%;
+        height:auto;
+        padding: 20px;
+    }
+
+    .new-transaction form {
+        padding: 0;
+    }
+
+    .container-inputs {
+        flex-direction: row;
+        /* margin-bottom: 20px; */
+    }
+
+    .container-inputs .form-line:first-child{
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .container-inputs .form-line:nth-child(2){
+        width: 348px; 
+        margin-right: 10px;
+    }
+
+    .container-inputs .form-line:last-child {
+        width: 150px;
+        margin-right: 0px;
+    }
+
+    .new-transaction .form-line {
+        width:200px;
+        align-self: flex-end;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    nav {   
+        background-color: transparent;
+        width:auto;
+    }
+
+    .title {
+        text-align: center;
+        width:100%;
+    }
+
+    .transactions {
+        width:100%;
+        margin-left:0;
+    }
+
+    header div .content {
+        height: 60px;
+    }
+
+    .logo{
+        width: 30px;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    #nav-menu{
+        width:50%;
+    }
+}
+
+
+@media screen and (max-width: 498px) {
+    
+    .modal-container {
+        width: 351px;
+    }
+
+    header{
+        margin-bottom:0px; 
+    }
+
+    #nav-menu{
+        width:85%
+    }
+    
+    .new-transaction{
+        border: none;
+        border-bottom: 1px solid #979797;
+        height: 350px;
+        width:100%;
+
+        padding:26px 0px ;
+
+        margin-bottom: 20px;
+    }
+
+    .new-transaction h2{
+        display:none;
+    }
+
+    .container-inputs{
+        flex-direction:column;
+    }
+
+    .container-inputs .form-line:first-child , 
+    .container-inputs .form-line:nth-child(2), 
+    .container-inputs .form-line:last-child,  
+    .new-transaction .form-line{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .transactions h2{
+        margin-bottom:20px;
+    }
+}

@@ -1,0 +1,116 @@
+/* Arquivo destinado a estilizacao de toda a sections transactions */
+
+/* ------------------ INICIO DA ESTILIZACAO DA SECTION TRANSACTIONS ------------------------ */
+
+.transactions {
+    display: flex;
+    width: 680px;
+  
+    padding-top: 20px;
+    margin-left: 20px;
+  
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .transaction h2 {
+    margin: 14px;
+  }
+  
+  /* ------------------------- INICIO DA ESTILIZACAO DO TBODY/THEAD ------------------ */
+  
+  /* Aqui todos os estilos em relacao ao tamanho e padrao da tabela sao definidos, contendo
+  tanto formaçao do thead como do tbody */
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  tr {
+    border-bottom: 1px solid #979797;
+    height: 33px;
+  }
+  
+  thead tr th,
+  tbody tr td,
+  tfoot tr td {
+    padding: 6px 0;
+  }
+  
+  thead tr th:first-child,
+  tbody tr td:first-child,
+  .first-space {
+    width: 40px;
+    text-align: center;
+  }
+  
+  thead tr th:nth-child(2),
+  tbody tr td:nth-child(2),
+  .name-total {
+    width: 30%;
+    max-width: 200px;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+  tbody tr td img {
+    height: 15px;
+    width: 15px;
+  }
+  
+  thead tr th:nth-child(3),
+  tbody tr td:nth-child(3),
+  .total-value {
+    text-align: right;
+    vertical-align: text-top;
+  }
+  
+  thead tr th:last-child,
+  tbody tr td:last-child {
+    width: 5%;
+    padding-left: 8px;
+    cursor: pointer;
+    padding-top: 8px;
+  }
+  
+  .second-space {
+    width: 5%;
+    padding-left: 8px;
+    padding-top: 8px;
+  }
+  
+  /* ------------------------- FIM DA ESTILIZACAO DO TBODY/THEAD --------------------- */
+  
+  /* LINHA DE SEPARACAO ENTRE A RENDERIZACAO DA TABELA E DO RESUMO DE TRANSACOES */
+  .separate-line {
+    height: 3px;
+  }
+  
+  /* ------------------------- INICIO DA ESTILIZACAO DO TFOTTER ---------------------- */
+  
+  .especial-tr {
+    border: none;
+  }
+  
+  .resume {
+    border: none;
+    font-weight: bold;
+  }
+  
+  .name-total {
+    vertical-align: top;
+  }
+  
+  .total-value {
+    text-align: right;
+  }
+  
+  /* ------------------------- FIM DA ESTILIZACAO DO TFOOTER ------------------------- */
+  /* ------------------------- FIM DA ESTILIZACAO DA TABELA -------------------------- */
+  /* ------------------ FIM DA ESTILIZACAO DA SECTION TRANSACTIONS ------------------- */
