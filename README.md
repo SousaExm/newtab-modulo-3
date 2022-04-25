@@ -1,4 +1,4 @@
-### Controle Financeiro
+# Controle Financeiro
 
 ## Resumo
     Este é um projeto disponibilizado pela trilha de imersao em desenvolvimento WEB da NewTab
@@ -22,5 +22,5 @@
     <li>Persistir as transações no Local Storage.</li>
 </ul>
 
-# Layout original
+## Layout original
 https://www.figma.com/file/U8ojEXx2vxSK2KOvoBvHVH8y/Frontend-test?node-id=28%3A551
