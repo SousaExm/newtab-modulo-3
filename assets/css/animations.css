@@ -1,10 +1,11 @@
-
-.nothing-here.fede-in {
-    animation: fede-in 1s;
+  .fede-in {
+    animation: fede-in 1s ease-in-out;
+    animation-fill-mode: forwards;
   }
-  
-  .table-transactions.fede-in {
-    animation-name: fede-in 1s;
+
+  .fade-out {
+    animation: fade-out 1s ease-in-out;
+    animation-fill-mode: forwards;
   }
   
   .load {
@@ -31,12 +32,51 @@
       transform: rotate(360deg);
     }
   }
+
+  .slide-left-right {
+    transform: translateX(-20px);
+    animation: slide 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .slide-right-left{
+    transform: translateX(20px);
+    animation: slide 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .slide-up-down {
+    transform: translateY(0px);
+    animation: slide-up-down 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slide-up-down {
+    to{
+      transform: translateY(30px);
+    }
+  }
+  
+  @keyframes slide {
+    to{
+      transform: translateX(0);
+    }
+  }
   
   @keyframes fede-in {
     to {
       opacity: 1;
     }
     from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    from{
+      opacity: 1;
+    }
+    to{
       opacity: 0;
     }
   }

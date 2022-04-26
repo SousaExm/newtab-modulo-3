@@ -1,9 +1,12 @@
 import TransactionsControllers from '../controllers/transactionsController.js'
 import Validation from '../utils/utils.js'
+import Animations from '../views/animations.js'
 
 const formNewTransact = document.querySelector("#form-new-transaction") //Form de envio de transacao
 const tablePanel = document.querySelector('.transactions') //Area de renderizacao da tabela
 const amountInput = document.querySelector('.amount-input') //Input de valores do form
+const nameInput = document.querySelector('.name-input') //Input de nome do form
+const btnSubmit = document.getElementById('submit-btn')
 const btnsDelete = document.getElementsByClassName("delete-unit-btn")//Botoes de deletar uma única transacao
 const confirmClearAll = document.querySelector('.confirm') //Botao de confirmar exlusao massa de transacoes
 const cancelClearAll = document.querySelector('.cancel') //Botao de cancelar exlusao em massa de transacoes 
@@ -22,6 +25,7 @@ const App = {
         tablePanel.innerHTML = TransactionsControllers.renderAllTransactions().table
         this.listenerBtnDelete();
         divValidAndLoad.innerHTML = ""
+        this.clearInputs();
     },
 
     //Adiciona o eventListnner no botao de exlusao de cada transacao,
@@ -37,6 +41,11 @@ const App = {
                 });
             };
         };
+    },
+
+    clearInputs(){
+        nameInput.value = "";
+        amountInput.value = "";
     }
 };
 
@@ -48,9 +57,16 @@ formNewTransact.addEventListener('submit', (event)=>{
     event.preventDefault();
     
     if(TransactionsControllers.create(event) != undefined){
-        divValidAndLoad.innerHTML = TransactionsControllers.create(event)
+    
+        Animations.load(divValidAndLoad, 2000, btnSubmit, true, TransactionsControllers.create(event))
+    
     }else{
-        App.renderTable();
+        
+        Animations.load(divValidAndLoad, 2000, btnSubmit, false)
+        
+        setTimeout(()=>{
+            App.renderTable();
+        },2000)
     }
 });
 
@@ -82,6 +98,10 @@ cancelClearAll.addEventListener('click', ()=>{
 //Recebe o valor digitado e envia ao maskAmountInput que retorna o valor
 //formatado no padrao R$ 10,90
 let amount = [];
+amountInput.addEventListener('focus', ()=>{
+    amountInput.value = ""
+    amount = []
+})
 amountInput.addEventListener('keydown', (event)=>{
     event.preventDefault();
     event.target.value = Validation.maskAmountInput(event, amount);   
@@ -108,4 +128,5 @@ window.addEventListener('resize', () =>{
         assideMenu.style.display = "none"
     }
 })
+
 
