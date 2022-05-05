@@ -22,6 +22,7 @@
         display: none;
         flex-direction: column;
         justify-content:flex-start;
+        z-index: 9999;
     }
 
     #nav-menu .line{
